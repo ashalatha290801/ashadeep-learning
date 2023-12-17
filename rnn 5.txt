@@ -1,0 +1,17 @@
+
+        "#5.RNN\n",
+        "import numpy as np\n",
+        "import tensorflow as tf\n",
+        "from tensorflow import keras\n",
+        "model = keras.Sequential([keras.layers.SimpleRNN(32, input_shape=(10,1)),keras.layers.Dense(1)])\n",
+        "model.compile(optimizer='adam', loss='mse')\n",
+        "X_train = np.random.randn(100, 10, 1)\n",
+        "y_train = np.random.randn(100, 1)\n",
+        "model.fit(X_train, y_train, epochs=10, batch_size=32)\n",
+        "X_test = np.random.randn(10, 10, 1)\n",
+        "y_test = np.random.randn(10, 1)\n",
+        "model.evaluate(X_test, y_test)"
+      ]
+    }
+  ]
+}
