@@ -1,0 +1,15 @@
+
+ 
+        "#Text to speech\n",
+        "!pip install gTTS\n",
+        "from gtts import gTTS\n",
+        "text_to_say=\"Welcome to the Text to Speech conversion session at Kalasalingam University\"\n",
+        "language = 'en'\n",
+        "gtts_object = gTTS(text = text_to_say, lang = language, slow = False)\n",
+        "gtts_object.save(\"/content/gtts.wav\")\n",
+        "from IPython.display import Audio\n",
+        "Audio(\"/content/gtts.wav\")"
+      ]
+    }
+  ]
+}
